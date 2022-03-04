@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <h1>where is the ISS?</h1>
@@ -19,8 +20,18 @@
       </ol>
     </ul>
 
+    <script src="/app.js"></script>
+
+    <div id="map">
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbAyRD-qTPAtwClFiOGsk5osyofEH_aTM&callback=initMap"
+        ;
+      ></script>
+    </div>
+
     <script>
-      getISS();
+      setInterval(getISS, 2000);
+      //   getISS();
       const api_url = "https://api.wheretheiss.at/v1/satellites/25544";
 
       async function getISS() {
