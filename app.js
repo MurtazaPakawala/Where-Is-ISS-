@@ -25,4 +25,4 @@ function initMap(lon, lat) {
   });
 }
 
-console.log("hello everyone is this even working");
+// console.log("hello everyone is this even working");
